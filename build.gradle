@@ -4,13 +4,22 @@ group 'com.shengsiyuan'
 version '1.0'
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
+    mavenLocal()
+    maven {
+        name 'aliyun'
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
     mavenCentral()
 }
 
 dependencies {
+    compile "org.joda:joda-primitives:1.0"
+    compile "joda-time:joda-time:2.9.9"
+
    testCompile (
-           "junit: junit: 4.11"
+           "junit:junit:4.12"
    )
 }
